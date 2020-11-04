@@ -1,6 +1,7 @@
 module.exports = {
   publicPath: './',
   assetsDir: 'static',
+  outputDir: 'example-dist',
   lintOnSave: process.env.NODE_ENV !== 'production',
   productionSourceMap: false,
   chainWebpack: (config) => {

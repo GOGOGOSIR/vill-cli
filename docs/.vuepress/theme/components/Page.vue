@@ -33,6 +33,7 @@ export default {
   watch: {
     $route: {
       handler (route) {
+        console.log(route, '=====')
         if (route.fullPath.indexOf('introduction') > 0) {
           this.deviceVisible = false
         } else {

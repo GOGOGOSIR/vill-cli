@@ -24,11 +24,17 @@ module.exports = {
           },
           {
             title: '快速上手',
-            path: '/guide/install'
+            path: '/guide/install',
+            meta: {
+              name: '/'
+            }
           },
           {
             title: '主题',
-            path: '/guide/theme'
+            path: '/guide/theme',
+            meta: {
+              name: '/'
+            }
           }
         ]
       }
