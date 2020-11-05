@@ -36,7 +36,7 @@ export default createComponent({
     loadingText: String,
   },
 
-  render() {
+  render () {
     return <div>11111</div>;
   },
 });

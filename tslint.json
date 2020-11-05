@@ -22,10 +22,5 @@
     "quotemark": [true, "single"],
     "only-arrow-functions": false,
     "space-before-function-paren": true
-  },
-  "compilerOptions": {
-    "strict": false,
-    "noImplicitAny": false,
-    "noImplicitThis": false
   }
 }

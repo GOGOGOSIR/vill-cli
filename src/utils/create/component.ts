@@ -1,17 +1,18 @@
-import Vue, { VNode, VueConstructor, ComponentOptions } from 'vue';
-// import { camelize } from '../format/string';
+import Vue, { VueConstructor, ComponentOptions } from 'vue';
+import { camelize } from '../format/string';
 
 export interface VillComponentOptions extends ComponentOptions<Vue> {
   install?: (Vue: VueConstructor) => void;
 }
 
 export function createComponent (name: string) {
-  return function (sfc: VillComponentOptions): VNode {
-    sfc.name = name;
-    sfc.install = (app: VueConstructor) => {
-      app.component(name as string, sfc);
+  return function (compObj: VillComponentOptions): VillComponentOptions {
+    name = camelize(`-${name}`);
+    compObj.name = name;
+    compObj.install = (vue: VueConstructor) => {
+      vue.component(name as string, compObj);
     };
 
-    return sfc as VNode;
+    return compObj as VillComponentOptions;
   };
 }
