@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "exp:dev": "vue-cli-service serve",
+    "exp:start": "vue-cli-service serve",
     "exp:build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:start": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "start": "run.sh"
   },
   "dependencies": {},
   "devDependencies": {
