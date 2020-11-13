@@ -10,7 +10,7 @@
     "lint": "vue-cli-service lint",
     "docs:start": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "start": "run.sh"
+    "start": "concurrently \"npm run exp:start\" \"npm run docs:start\""
   },
   "dependencies": {},
   "devDependencies": {
@@ -24,6 +24,7 @@
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/test-utils": "^1.0.3",
+    "concurrently": "^5.3.0",
     "core-js": "^3.6.5",
     "node-sass": "^4.12.0",
     "register-service-worker": "^1.7.1",
