@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import { IFRAME_SRC } from '../../config/config.js'
+import { IFRAME_SRC } from '@vuepress/utils/config.js'
+import { baseRoutes } from '@example/router/baseRouter.ts'
 
 export default {
   name: 'DocsWrapper',
@@ -33,16 +34,17 @@ export default {
   watch: {
     $route: {
       handler (route) {
-        console.log(route, '=====')
-        if (route.fullPath.indexOf('introduction') > 0) {
-          this.deviceVisible = false
-        } else {
+        console.log(route, '=====', baseRoutes)
+        if (route.fullPath.indexOf('/components/') > -1) {
           this.deviceVisible = true
+          console.log(this.deviceVisible)
           if (route.fullPath.indexOf('theme') > 0) {
             this.iframeSrc = IFRAME_SRC +  'about'
           } else {
             this.iframeSrc = IFRAME_SRC
           }
+        } else {
+          this.deviceVisible = false
         }
       },
       immediate: true

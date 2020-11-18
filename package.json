@@ -10,7 +10,8 @@
     "lint": "vue-cli-service lint",
     "docs:start": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "start": "concurrently \"npm run exp:start\" \"npm run docs:start\""
+    "start": "concurrently \"npm run exp:start\" \"npm run docs:start\"",
+    "styleguide": "vue-docgen --watch"
   },
   "dependencies": {},
   "devDependencies": {
@@ -26,12 +27,15 @@
     "@vue/test-utils": "^1.0.3",
     "concurrently": "^5.3.0",
     "core-js": "^3.6.5",
+    "globby": "^11.0.1",
     "node-sass": "^4.12.0",
     "register-service-worker": "^1.7.1",
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3",
     "vue": "^2.6.12",
     "vue-class-component": "^7.2.6",
+    "vue-docgen-api": "^4.31.1",
+    "vue-docgen-cli": "^4.31.1",
     "vue-property-decorator": "^8.5.1",
     "vue-router": "^3.4.8",
     "vue-template-compiler": "^2.6.11",
