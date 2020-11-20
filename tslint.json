@@ -10,7 +10,8 @@
       "docs/**",
       "lib/**",
       "docs-dist/**",
-      "example-dist/**"
+      "example-dist/**",
+      "src/copyComp/**"
     ]
   },
   "rules": {
@@ -21,6 +22,9 @@
     "ordered-imports": false,
     "quotemark": [true, "single"],
     "only-arrow-functions": false,
-    "space-before-function-paren": true
+    "space-before-function-paren": true,
+    "no-console": false,
+    "trailing-comma": false,
+    "semicolon": false
   }
 }

@@ -2,20 +2,22 @@
   "name": "vue2",
   "version": "0.1.0",
   "private": true,
+  "typings": "types/index.d.ts",
   "scripts": {
+    "start": "concurrently \"npm run createDocs\" \"npm run exp:start\" \"npm run docs:start\"",
+    "createDocs": "rm -rf ./docs/components && vue-docgen --watch",
     "exp:start": "vue-cli-service serve",
     "exp:build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint",
     "docs:start": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "start": "concurrently \"npm run exp:start\" \"npm run docs:start\"",
-    "styleguide": "vue-docgen --watch"
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^24.0.19",
+    "@types/node": "^14.14.9",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-e2e-cypress": "~4.5.0",
     "@vue/cli-plugin-pwa": "~4.5.0",

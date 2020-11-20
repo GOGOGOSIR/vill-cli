@@ -3,10 +3,10 @@
 // // import vill from '../../lib/index'
 // // import '../../lib/common/style/index.css'
 
-export default ({
-  Vue,
-  router
-}) => {
-  // Vue.use(vill)
-  console.log(router, 'router')
-}
+// export default ({
+//   Vue,
+//   router
+// }) => {
+//   // Vue.use(vill)
+//   console.log(router, 'router')
+// }

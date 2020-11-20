@@ -15,8 +15,7 @@
 </template>
 
 <script>
-import { IFRAME_SRC } from '@vuepress/utils/config.js'
-import { baseRoutes } from '@example/router/baseRouter.ts'
+import { IFRAME_SRC } from '@vuepress/utils/config'
 
 export default {
   name: 'DocsWrapper',
@@ -34,15 +33,9 @@ export default {
   watch: {
     $route: {
       handler (route) {
-        console.log(route, '=====', baseRoutes)
         if (route.fullPath.indexOf('/components/') > -1) {
           this.deviceVisible = true
-          console.log(this.deviceVisible)
-          if (route.fullPath.indexOf('theme') > 0) {
-            this.iframeSrc = IFRAME_SRC +  'about'
-          } else {
-            this.iframeSrc = IFRAME_SRC
-          }
+          this.iframeSrc = IFRAME_SRC + route.fullPath.replace(/(.*\/)*([^.]+).*/ig, "$2")
         } else {
           this.deviceVisible = false
         }
@@ -101,7 +94,7 @@ export default {
     height: 100%;
     overflow-y: auto;
     position: sticky;
-    top: 3.8em;
+    top: 5em;
     display: flex;
     justify-content: center;
     margin: 0 56px 0 25px;

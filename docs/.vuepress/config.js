@@ -26,7 +26,6 @@ module.exports = () => {
     chainWebpack: (config) => {
       config.resolve.alias
         .set('@vuepress', path.join(__dirname, './'))
-        .set('@example', path.join(__dirname, '../', '../', 'example'))
       config.module
         .rule()
         .test(/\.ts$/)

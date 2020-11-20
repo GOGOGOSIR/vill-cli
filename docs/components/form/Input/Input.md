@@ -1,26 +1,12 @@
 # Input
 
-## Props
-
-| Prop name   | Description                                              | Type           | Values | Default |
-| ----------- | -------------------------------------------------------- | -------------- | ------ | ------- |
-| v-model     |                                                          | number\|string | -      |         |
-| regExp      | Using for: String.prototype.replace(regexp, replacement) | RegExp         | -      | null    |
-| replacement | Using for: String.prototype.replace(regexp, replacement) | string         | -      | ''      |
-
-## Events
-
-| Event name | Type      | Description  |
-| ---------- | --------- | ------------ |
-| input      | union     | Input event  |
-| change     | undefined | Change event |
-| fire       | string    | Fire event   |
+> input 组件
 
 ---
 
 Basic Input
 
-```js
+```jsx
   const setting = {
     regExp: /^[0\D]*|\D*/g, // Match any character that doesn't belong to the positive integer
     replacement: '',

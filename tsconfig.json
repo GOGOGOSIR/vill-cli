@@ -12,6 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "noImplicitAny": false,
     "types": [
       "webpack-env",
       "jest"
@@ -29,11 +30,15 @@
     ]
   },
   "include": [
+    "types/**/*",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx", "example/shims-tsx.d.ts"
+    "tests/**/*.tsx",
+    "example/**/*.vue",
+    "example/**/*.ts",
+    "example/**/*.tsx"
   ],
   "exclude": [
     "node_modules"

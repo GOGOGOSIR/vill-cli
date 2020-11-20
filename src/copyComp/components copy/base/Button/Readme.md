@@ -1,9 +1,3 @@
-# Button
-
-> button 组件
-
----
-
 Basic button:
 
 ```jsx
@@ -30,25 +24,26 @@ You can also use the Single File Component Format
 
 ```vue
 <template>
-  <div>
-    <Button @click.native="pushButton">Push Me</Button>
-    <hr />
-    <p>Next Dog Name: {{ dogName }}</p>
-  </div>
+    <div>
+        <Button @click.native="pushButton">Push Me</Button>
+        <hr />
+        <p>Next Dog Name: {{ dogName }}</p>
+    </div>
 </template>
 <script>
+
 // You can also use 'exports.default = {}' style module exports.
 export default {
-  name: "ButtonExample",
+  name: 'ButtonExample',
   data() {
-    return { numClicks: 0, dogName: "json" };
+    return { numClicks: 0, dogName: 'json' }
   },
   methods: {
     pushButton() {
-      this.numClicks += 1;
-      this.dogName = "jj";
+      this.numClicks += 1
+      this.dogName = 'jj'
     }
   }
-};
+}
 </script>
 ```

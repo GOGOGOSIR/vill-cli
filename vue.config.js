@@ -1,3 +1,5 @@
+const { join } = require('path')
+
 module.exports = {
   publicPath: './',
   assetsDir: 'static',
@@ -9,6 +11,8 @@ module.exports = {
       .clear()
       .add('./example/main.ts')
       .end()
+    // config.resolve.alias
+    //   .set('@example', 'example')
   },
   devServer: {
     port: 9527,
